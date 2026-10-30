@@ -1,0 +1,60 @@
+[
+  {
+    "id": "srv-dell-r640",
+    "nome": "Servidor Dell PowerEdge R640 1U",
+    "categoria": "Servidores",
+    "tipo": "b2b",
+    "origem": "Distribuidor Oficial",
+    "badge": "Corporativo B2B",
+    "descricao": "Dual Intel Xeon Silver/Gold, até 384GB ECC, gavetas Hot-Plug, iDRAC9 Enterprise e fontes redundantes.",
+    "preco": "Sob Consulta (Faturado PJ)",
+    "condicao": "Faturamento direto para empresas, órgãos e contratos",
+    "acao_texto": "Solicitar Cotação B2B",
+    "acao_tipo": "whatsapp",
+    "imagem": "assets/images/logo.png"
+  },
+  {
+    "id": "sw-cisco-catalyst",
+    "nome": "Switch Cisco Catalyst 2960-X / C9200L 24P PoE+",
+    "categoria": "Redes",
+    "tipo": "b2b",
+    "origem": "Distribuidor Oficial",
+    "badge": "Infraestrutura",
+    "descricao": "Switch gerenciável Layer 2/Layer 3 com 24 portas Gigabit PoE+ e 4 uplinks SFP 10G para alta densidade.",
+    "preco": "Sob Consulta (Faturado PJ)",
+    "condicao": "Garantia estendida e suporte de implantação",
+    "acao_texto": "Solicitar Orçamento PJ",
+    "acao_tipo": "whatsapp",
+    "imagem": "assets/images/logo.png"
+  },
+  {
+    "id": "cab-cat6-furukawa",
+    "nome": "Cabo de Rede Furukawa Cat6 SohoPlus 305m",
+    "categoria": "Cabeamento",
+    "tipo": "b2c",
+    "origem": "Mercado Livre",
+    "badge": "Pronta Entrega",
+    "descricao": "Bobina homologada Anatel com condutores 100% cobre para cabeamento estruturado de alta performance.",
+    "preco": "R$ 889,90",
+    "condicao": "Disponível no Mercado Livre / Envio Imediato",
+    "acao_texto": "Comprar no Mercado Livre",
+    "acao_tipo": "link_externo",
+    "url_externa": "https://mercadolivre.com.br",
+    "imagem": "assets/images/logo.png"
+  },
+  {
+    "id": "patch-cord-shopee",
+    "nome": "Patch Cord Cat6 Gigabit Blindado 2m (Kit 5 Unid)",
+    "categoria": "Acessórios",
+    "tipo": "b2c",
+    "origem": "Shopee",
+    "badge": "Oferta Varejo",
+    "descricao": "Cabos de manobra padrão RJ-45 confeccionados e testados em fábrica com conector banhado a ouro.",
+    "preco": "R$ 74,50",
+    "condicao": "Compra segura via Shopee Oficial",
+    "acao_texto": "Ver Oferta na Shopee",
+    "acao_tipo": "link_externo",
+    "url_externa": "https://shopee.com.br",
+    "imagem": "assets/images/logo.png"
+  }
+]
