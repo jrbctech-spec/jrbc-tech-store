@@ -3,374 +3,289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>JRBC Tech | Loja de Tecnologia, Venda de Equipamentos & Serviços de TI</title>
-  <meta name="description" content="Compre equipamentos de TI, servidores, firewalls e contrate suporte de missão crítica com SLA imediato. Atendimento presencial em Palmas e entrega para todo o Brasil.">
-  <meta name="keywords" content="comprar servidor dell, switches cisco, suporte ti palmas, field service tocantins, jrbc tech loja, computadores corporativos">
-  <meta name="author" content="JRBC Tech — GLOBAL INNOVATIONS">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.jrbctech.com.br/">
-  <meta property="og:title" content="JRBC Tech Store & Solutions | Tecnologia e Serviços">
-  <meta property="og:description" content="Loja de equipamentos corporativos, locação e sustentação de TI 24/7 com pronta resposta.">
-  <meta property="og:image" content="assets/images/logo.png">
-
-  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <title>JRBC Tech Store | Equipamentos, Marketplaces & Soluções Corporativas</title>
   <link rel="stylesheet" href="css/style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ITService",
-    "name": "JRBC Tech Store & Services",
-    "legalName": "JRBC TECH TECNOLOGIA LTDA",
-    "taxID": "65.488.003/0001-61",
-    "url": "https://www.jrbctech.com.br/",
-    "telephone": "+55-63-98121-3180",
-    "email": "contato@jrbctech.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Quadra ACSV SE 32, Av. LO 05, Lote 22, Nº 22",
-      "addressLocality": "Palmas",
-      "addressRegion": "TO",
-      "postalCode": "77021-026",
-      "addressCountry": "BR"
+  <style>
+    :root {
+      --primary: #004aad;
+      --primary-dark: #002d6b;
+      --accent: #ff9900;
+      --bg: #0b0f19;
+      --card-bg: #131b2e;
+      --text: #ffffff;
+      --text-muted: #8fa0bc;
+      --border: #23314f;
     }
-  }
-  </script>
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-area {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .logo-area span { color: var(--accent); }
+    .nav-tabs {
+      display: flex;
+      gap: 12px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .badge-b2b { background: #0056b3; color: white; }
+    .badge-shopee { background: #ee4d2d; color: white; }
+    .badge-ml { background: #ffe600; color: #111; }
+    .badge-service { background: #10b981; color: white; }
+    .btn {
+      display: inline-block;
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 15px;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-checkout { background: var(--accent); color: #111; }
+    .btn-market { background: #ff5722; color: white; }
+    .btn-b2b-builder { background: #10b981; color: white; }
+    .calc-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .calc-group { margin-bottom: 16px; }
+    .calc-group label { display: block; margin-bottom: 6px; font-size: 14px; color: var(--text-muted); }
+    .calc-group select, .calc-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Barra Superior de Vendas -->
-  <div style="background: #081018; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.4rem 0; font-size: 0.78rem; color: #a0aec0;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">JRBC <span>TECH STORE</span></div>
       <div>
-        <span>📍 Atendimento Presencial: <strong>Palmas & Tocantins</strong></span>
-        <span style="margin: 0 0.5rem; opacity: 0.4;">|</span>
-        <span>🌐 Envio de Hardware & Suporte Remoto: <strong>Brasil & Global</strong></span>
+        <span style="color: var(--text-muted); font-size: 13px;">Palmas/TO &bull; Operação B2B e Varejo</span>
       </div>
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <span style="color: #48bb78; font-weight: 600;">● Plantão Comercial Ativo</span>
-        <a href="https://wa.me/5563981213180?text=Quero%20fazer%20uma%20cotação%20rápida" target="_blank" style="color: #d4af37; text-decoration: none; font-weight: 700;">Pedir Cotação Rápida →</a>
+    </header>
+
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-marketplaces')">Varejo & Marketplaces</button>
+      <button class="tab-btn" onclick="switchTab('tab-b2b-calc')">Projetos B2B (Hardware + Serviço)</button>
+      <button class="tab-btn" onclick="switchTab('tab-distribuidor')">Equipamentos a Pronta Entrega</button>
+    </div>
+
+    <!-- ABA 1: MARKETPLACES (B2C DIRETO) -->
+    <div id="tab-marketplaces" class="tab-content active">
+      <div style="margin-bottom: 20px;">
+        <h3>Compre Online nos Nossos Marketplaces</h3>
+        <p style="color: var(--text-muted); font-size: 14px;">Acessórios, cabos e periféricos com garantia e envio seguro.</p>
+      </div>
+      <div class="grid" id="grid-marketplaces">
+        <!-- Card Shopee -->
+        <div class="card">
+          <div>
+            <span class="badge badge-shopee">Shopee Oficial</span>
+            <h3>Patch Cord Cat6 Gigabit 2m (Kit 5 Unid)</h3>
+            <p style="color: var(--text-muted); font-size: 13px;">Cabos homologados com conectores blindados e testados.</p>
+          </div>
+          <div>
+            <div style="font-size: 20px; font-weight: bold; margin: 10px 0;">R$ 74,50</div>
+            <a href="https://shopee.com.br" target="_blank" class="btn btn-market" style="width: 100%; box-sizing: border-box;">Comprar na Shopee ↗</a>
+          </div>
+        </div>
+
+        <!-- Card Mercado Livre -->
+        <div class="card">
+          <div>
+            <span class="badge badge-ml">Mercado Livre</span>
+            <h3>Bobina Cabo Furukawa Cat6 305m 100% Cobre</h3>
+            <p style="color: var(--text-muted); font-size: 13px;">Homologado Anatel com envio Full para todo o Brasil.</p>
+          </div>
+          <div>
+            <div style="font-size: 20px; font-weight: bold; margin: 10px 0;">R$ 889,90</div>
+            <a href="https://mercadolivre.com.br" target="_blank" class="btn btn-market" style="background: #2d3277; width: 100%; box-sizing: border-box;">Comprar no Mercado Livre ↗</a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- ABA 2: CALCULADORA B2B DE PROJETOS -->
+    <div id="tab-b2b-calc" class="tab-content">
+      <div class="calc-box">
+        <span class="badge badge-service">Exclusivo Almoxarifado / Compras</span>
+        <h2>Calculadora de Escopo & Materiais B2B</h2>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+          Selecione a necessidade técnica da sua empresa para calcular os insumos, horas de implantação e prazo estimado.
+        </p>
+
+        <div class="calc-group">
+          <label>Tipo de Demanda Técnica</label>
+          <select id="project-type" onchange="calcularEscopo()">
+            <option value="rede">Implantação de Pontos de Rede Estruturada</option>
+            <option value="bancada">Instalação & Virtualização de Servidor (Rack/Bancada)</option>
+          </select>
+        </div>
+
+        <div class="calc-group">
+          <label id="lbl-quantidade">Quantidade de Pontos</label>
+          <input type="number" id="project-qty" value="5" min="1" max="50" oninput="calcularEscopo()">
+        </div>
+
+        <div id="escopo-resultado" style="background: #0b0f19; border: 1px dashed var(--border); padding: 16px; border-radius: 8px; margin-top: 15px;">
+          <!-- Resultado do cálculo dinâmico -->
+        </div>
+
+        <button class="btn btn-b2b-builder" style="width: 100%; margin-top: 15px;" onclick="solicitarOrcamentoFormal()">Gerar Pedido Faturado com OS</button>
+      </div>
+    </div>
+
+    <!-- ABA 3: EQUIPAMENTOS DIRETO DO DISTRIBUIDOR -->
+    <div id="tab-distribuidor" class="tab-content">
+      <div style="margin-bottom: 20px;">
+        <h3>Equipamentos Faturados Direto do Distribuidor</h3>
+        <p style="color: var(--text-muted); font-size: 14px;">Envio do armazém direto para o endereço da sua empresa.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <span class="badge badge-b2b">Distribuidor Oficial</span>
+            <h3>Servidor Dell PowerEdge R640 1U</h3>
+            <p style="color: var(--text-muted); font-size: 13px;">Dual Intel Xeon, 64GB ECC, iDRAC9, Fontes Redundantes.</p>
+          </div>
+          <div>
+            <div style="font-size: 16px; font-weight: bold; color: var(--accent); margin: 10px 0;">Faturamento Direto PJ</div>
+            <button class="btn btn-checkout" style="width: 100%;" onclick="alert('Iniciando gateway de faturamento do distribuidor...')">Comprar com Despacho Automático</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Header & Navegação -->
-  <header class="header" id="header">
-    <div class="container nav-container">
-      <a href="#inicio" class="logo-link">
-        <img src="assets/images/logo.png" alt="Logo JRBC Tech" class="logo-img">
-        <div class="logo-info">
-          <div class="logo-title">JRBC <span>TECH</span></div>
-          <div class="logo-signature">STORE & SOLUTIONS</div>
-        </div>
-      </a>
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      
+      event.target.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
 
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#loja" class="nav-link" style="color: #d4af37; font-weight: 700;">Loja de Produtos</a>
-        <a href="#planos" class="nav-link">Planos Mensais</a>
-        <a href="#servicos" class="nav-link">Serviços Técnicos</a>
-        <a href="#clientes" class="nav-link">Grandes Clientes</a>
-        <a href="#compliance" class="nav-link">Empresa B2B</a>
-        <a href="#contato" class="nav-link">Falar com Consultor</a>
-      </nav>
+    function calcularEscopo() {
+      const tipo = document.getElementById('project-type').value;
+      const qty = parseInt(document.getElementById('project-qty').value) || 1;
+      const res = document.getElementById('escopo-resultado');
 
-      <div>
-        <a href="#loja" class="btn btn-gold" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
-          Comprar / Cotar
-        </a>
-      </div>
-    </div>
-  </header>
+      if (tipo === 'rede') {
+        const cabosMetros = qty * 45;
+        const conectores = qty * 2;
+        const horas = Math.ceil(qty * 1.5);
+        const dias = Math.ceil(horas / 6);
 
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <div class="hero-badge">
-          <div class="hero-badge-dot"></div>
-          <span>HUB DE TECNOLOGIA: SERVIÇOS & EQUIPAMENTOS CORPORATIVOS</span>
-        </div>
-
-        <h1 class="hero-headline">
-          Compre Tecnologia & Contrate Suporte de Elite <span class="gradient-text">com Resposta Imediata</span>
-        </h1>
-
-        <p class="hero-subheadline">
-          Do hardware crítico à operação ininterrupta. Fornecemos servidores, redes corporativas e suporte N1/N2/N3 presencial em Palmas e suporte remoto global.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#loja" class="btn btn-primary">
-            <span>Ver Catálogo de Equipamentos</span>
-          </a>
-          <a href="#planos" class="btn btn-secondary">
-            <span>Contratar Planos Mensais PJ</span>
-          </a>
-        </div>
-
-        <div class="hero-pillars">
-          <div class="hero-pillar-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Faturamento Direto B2B (Faturado PJ)</span>
-          </div>
-          <div class="hero-pillar-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Entrega e Instalação em Palmas/TO</span>
-          </div>
-          <div class="hero-pillar-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>SLA Contratual Rigoroso</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card de Cotação Dinâmica -->
-      <div class="hero-right">
-        <div class="hero-visual-card" style="border: 1px solid rgba(212,175,55,0.4);">
-          <div class="visual-card-header">
-            <span style="font-weight: 700; color: #fff;">⚡ COTAÇÃO EXPRESSA B2B</span>
-            <div class="system-status">
-              <span class="system-pulse"></span>
-              Atendimento Imediato
-            </div>
-          </div>
-
-          <p style="font-size: 0.85rem; color: #cbd5e0; margin: 1rem 0;">
-            Selecione a sua necessidade prioritária para atendimento rápido via WhatsApp:
-          </p>
-
-          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <a href="https://wa.me/5563981213180?text=Preciso%20comprar%20servidores%20ou%20peças%20de%20reposição" target="_blank" class="btn btn-secondary" style="justify-content: space-between; text-align: left; padding: 0.75rem 1rem;">
-              <span>🛒 Quero Comprar Servidores / Peças</span>
-              <span>→</span>
-            </a>
-            <a href="https://wa.me/5563981213180?text=Preciso%20de%20atendimento%20presencial%20urgente%20em%20Palmas" target="_blank" class="btn btn-secondary" style="justify-content: space-between; text-align: left; padding: 0.75rem 1rem;">
-              <span>🚨 Chamado Presencial Emergencial (Palmas)</span>
-              <span>→</span>
-            </a>
-            <a href="https://wa.me/5563981213180?text=Quero%20uma%20proposta%20de%20contrato%20mensal%20de%20TI" target="_blank" class="btn btn-secondary" style="justify-content: space-between; text-align: left; padding: 0.75rem 1rem;">
-              <span>📄 Contrato de Sustentação Mensal PJ</span>
-              <span>→</span>
-            </a>
-          </div>
-
-          <div style="margin-top: 1.25rem; font-size: 0.75rem; color: #a0aec0; text-align: center;">
-            Garantia formal por contrato e Nota Fiscal Eletrônica.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOJA DE HARDWARE & PRODUTOS -->
-  <section class="section" id="loja">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Catálogo de Produtos</span>
-        <h2 class="section-title">EQUIPAMENTOS, SERVIDORES & HARDWARE CORPORATIVO</h2>
-        <p class="section-desc">
-          Venda direta e locação com garantia técnica, procedência e possibilidade de instalação inclusa no local.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-        
-        <!-- Produto 1 -->
-        <div class="solution-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: rgba(212,175,55,0.15); color: #d4af37; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">DISPONÍVEL / SOB ENCOMENDA</span>
-            <h3 class="solution-title" style="margin-top: 0.8rem;">Servidores Corporativos Dell PowerEdge</h3>
-            <p class="solution-desc">Linhas Rack e Torre (R640, R740, T440) configuradas sob medida para virtualização, ERP e base de dados.</p>
-            <ul style="font-size: 0.85rem; color: #a0aec0; margin: 1rem 0; line-height: 1.6; list-style: none; padding: 0;">
-              <li>✓ Configurações com processadores Intel Xeon / AMD</li>
-              <li>✓ Memórias ECC e controladoras RAID com bateria</li>
-              <li>✓ Opção de entrega com Proxmox VE, VMware ou Windows Server</li>
-            </ul>
-          </div>
-          <a href="https://wa.me/5563981213180?text=Olá,%20tenho%20interesse%20em%20cotar%20Servidores%20Dell%20PowerEdge" target="_blank" class="btn btn-gold" style="width: 100%; text-align: center;">
-            Cotar Configuração
-          </a>
-        </div>
-
-        <!-- Produto 2 -->
-        <div class="solution-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: rgba(72,187,120,0.15); color: #48bb78; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">PRONTA ENTREGA B2B</span>
-            <h3 class="solution-title" style="margin-top: 0.8rem;">Switches Gerenciáveis Cisco & Roteamento</h3>
-            <p class="solution-desc">Switches L2/L3 Catalyst, routers corporativos e firewalls para proteger a infraestrutura da empresa.</p>
-            <ul style="font-size: 0.85rem; color: #a0aec0; margin: 1rem 0; line-height: 1.6; list-style: none; padding: 0;">
-              <li>✓ Portas Gigabit PoE+ para CFTV e Access Points</li>
-              <li>✓ Suporte a VLANs isoladas e agregação de link</li>
-              <li>✓ Equipamentos testados e homologados em bancada</li>
-            </ul>
-          </div>
-          <a href="https://wa.me/5563981213180?text=Olá,%20quero%20cotar%20Switches%20Cisco%20e%20equipamentos%20de%20rede" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;">
-            Comprar / Cotar Rede
-          </a>
-        </div>
-
-        <!-- Produto 3 -->
-        <div class="solution-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <span style="background: rgba(212,175,55,0.15); color: #d4af37; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">REPOSIÇÃO CRÍTICA</span>
-            <h3 class="solution-title" style="margin-top: 0.8rem;">Peças de Reposição & Upgrades</h3>
-            <p class="solution-desc">Discos SAS/SSD Hot-swap, fontes redundantes, memórias registradas e gavetas com envio rápido.</p>
-            <ul style="font-size: 0.85rem; color: #a0aec0; margin: 1rem 0; line-height: 1.6; list-style: none; padding: 0;">
-              <li>✓ Discos SAS 10K/15K e SSD Enterprise (Dell / HP)</li>
-              <li>✓ Fontes redundantes 495W, 750W, 1100W</li>
-              <li>✓ Troca emergencial no local em Palmas</li>
-            </ul>
-          </div>
-          <a href="https://wa.me/5563981213180?text=Preciso%20de%20peças%20de%20reposição%20urgente%20para%20servidor" target="_blank" class="btn btn-gold" style="width: 100%; text-align: center;">
-            Consultar Peça
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PLANOS DE ASSINATURA -->
-  <section class="section section-alt" id="planos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Sustentação Contínua</span>
-        <h2 class="section-title">PLANOS MENSAIS DE TI GERENCIADA & SLA</h2>
-        <p class="section-desc">Evite paragens operacionais com contratos de monitorização e suporte proativo.</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-        
-        <!-- Plano Start -->
-        <div class="solution-card" style="border: 1px solid rgba(255,255,255,0.1);">
-          <div class="solution-number">Plano Start</div>
-          <h3 class="solution-title">Monitoramento & Suporte N1/N2</h3>
-          <p class="solution-desc">Ideal para comércios e escritórios que exigem estabilidade contínua.</p>
-          <div style="font-size: 1.4rem; font-weight: 800; color: #fff; margin: 1rem 0;">A partir de R$ 980 <span style="font-size: 0.8rem; color: #a0aec0; font-weight: 400;">/mês</span></div>
-          <ul style="font-size: 0.85rem; color: #cbd5e0; line-height: 1.7; list-style: none; padding: 0; margin-bottom: 1.5rem;">
-            <li>✓ Suporte remoto ilimitado</li>
-            <li>✓ Manutenção preventiva periódica</li>
-            <li>✓ Gestão de cópias de segurança (backup)</li>
-            <li>✓ Atendimento presencial agendado em Palmas</li>
+        res.innerHTML = `
+          <strong style="color: #10b981;">Lista de Materiais Necessários:</strong>
+          <ul style="font-size: 13px; color: var(--text-muted); margin: 8px 0;">
+            <li>${cabosMetros}m de Cabo Cat6 Homologado 100% Cobre</li>
+            <li>${conectores} Conectores Macho RJ-45 Cat6 + ${qty} Keystones Fêmea</li>
+            <li>${qty} Patch Cords de manobra (1,5m)</li>
+            <li>${qty} Caixas de sobrepor com espelho</li>
           </ul>
-          <a href="https://wa.me/5563981213180?text=Quero%20contratar%20o%20Plano%20Start%20de%20TI" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">Contratar Plano Start</a>
-        </div>
-
-        <!-- Plano Corporativo -->
-        <div class="solution-card featured" style="border: 1px solid #d4af37; transform: scale(1.02);">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="solution-number">Plano Corporativo</div>
-            <span style="background: #d4af37; color: #000; font-weight: 800; font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 4px;">MAIS PROCURADO</span>
+          <div style="font-size: 13px; border-top: 1px solid var(--border); padding-top: 8px;">
+            <strong>Mão de Obra Estimada:</strong> ${horas} horas técnicas (~${dias} dia(s) úteis)<br>
+            <strong>Garantia de Certificação:</strong> 1 ano na infraestrutura
           </div>
-          <h3 class="solution-title">Infraestrutura Crítica & Servidores</h3>
-          <p class="solution-desc">Para ambientes corporativos que não toleram indisponibilidade de sistemas.</p>
-          <div style="font-size: 1.4rem; font-weight: 800; color: #d4af37; margin: 1rem 0;">Sob Medida (SLA Garantido)</div>
-          <ul style="font-size: 0.85rem; color: #cbd5e0; line-height: 1.7; list-style: none; padding: 0; margin-bottom: 1.5rem;">
-            <li>✓ Sustentação presencial N3 com tempo de resposta estrito</li>
-            <li>✓ Gestão de Servidores Dell, Storages e Proxmox</li>
-            <li>✓ Switches Cisco, VLANs e Firewall de Borda</li>
-            <li>✓ Observabilidade Zabbix + Grafana 24/7 com alertas ativos</li>
-            <li>✓ Plano formal de Disaster Recovery</li>
+        `;
+      } else {
+        res.innerHTML = `
+          <strong style="color: #10b981;">Serviço de Bancada / Servidor:</strong>
+          <ul style="font-size: 13px; color: var(--text-muted); margin: 8px 0;">
+            <li>Montagem e fixação em Rack 19"</li>
+            <li>Configuração de controladora RAID 1/5/10</li>
+            <li>Instalação e endurecimento do Proxmox VE / Hyper-V</li>
+            <li>Testes de estresse de memória ECC e conectividade IPMI</li>
           </ul>
-          <a href="https://wa.me/5563981213180?text=Quero%20proposta%20para%20o%20Plano%20Corporativo%20de%20TI" target="_blank" class="btn btn-gold" style="width: 100%; text-align: center;">Solicitar Proposta</a>
-        </div>
-
-        <!-- Plano Cloud / Remoto -->
-        <div class="solution-card" style="border: 1px solid rgba(255,255,255,0.1);">
-          <div class="solution-number">Plano Global & Cloud</div>
-          <h3 class="solution-title">DevOps, Nuvem & Observabilidade</h3>
-          <p class="solution-desc">Para empresas com infraestrutura em nuvem no Brasil ou no exterior.</p>
-          <div style="font-size: 1.4rem; font-weight: 800; color: #fff; margin: 1rem 0;">Customizado B2B</div>
-          <ul style="font-size: 0.85rem; color: #cbd5e0; line-height: 1.7; list-style: none; padding: 0; margin-bottom: 1.5rem;">
-            <li>✓ Implantação de Zabbix/Grafana em Cloud</li>
-            <li>✓ Automações em Python, Bash e PowerShell</li>
-            <li>✓ Administração de bases PostgreSQL e MySQL</li>
-            <li>✓ Governação alinhada com ITIL v4</li>
-          </ul>
-          <a href="https://wa.me/5563981213180?text=Quero%20conhecer%20o%20Plano%20Cloud%20e%20Observabilidade" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center;">Falar sobre Projetos Cloud</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- GRANDES CLIENTES -->
-  <section class="section" id="clientes">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Histórico de Confiança</span>
-        <h2 class="section-title">QUEM CONFIA NA JRBC TECH</h2>
-        <p class="section-desc">Atuação de linha de frente nos ambientes mais exigentes do país.</p>
-      </div>
-
-      <div class="projects-grid">
-        <div class="project-card">
-          <span class="project-category">Missão Crítica Aeroportuária</span>
-          <h3 class="project-title">Aeroporto de Palmas (PMW) / CCR Aeroportos</h3>
-          <p class="detail-content">Sustentação 24/7 de sistemas CUTE, CUPPS e painéis FIDS via BMC Helix.</p>
-        </div>
-        <div class="project-card">
-          <span class="project-category">Órgão Público Federal</span>
-          <h3 class="project-title">Justiça Federal do Tocantins (JF.TO)</h3>
-          <p class="detail-content">Suporte Nível 3, Active Directory, GPO e redes LAN/WAN.</p>
-        </div>
-        <div class="project-card">
-          <span class="project-category">Governo Federal</span>
-          <h3 class="project-title">DNIT Palmas / Positivo S+</h3>
-          <p class="detail-content">Sustentação de Datacenter local, GLPI e monitorização Zabbix.</p>
-        </div>
-        <div class="project-card">
-          <span class="project-category">Grandes Corporações</span>
-          <h3 class="project-title">VLI Logística, BRF, Carrefour e Claro</h3>
-          <p class="detail-content">Manutenção corretiva de hardware e conectividade crítica.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPLIANCE B2B -->
-  <section class="section section-alt" id="compliance">
-    <div class="container">
-      <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.5rem;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; align-items: center;">
-          <div>
-            <span style="color: #d4af37; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Conformidade Empresarial</span>
-            <h3 style="color: #fff; font-size: 1.3rem; margin: 0.4rem 0 0.8rem 0;">JRBC TECH TECNOLOGIA LTDA</h3>
-            <p style="color: #a0aec0; font-size: 0.9rem;">
-              CNPJ: <strong>65.488.003/0001-61</strong><br>
-              Inscrições regulares e certidões negativas em dia para licitações e contratos corporativos.
-            </p>
+          <div style="font-size: 13px; border-top: 1px solid var(--border); padding-top: 8px;">
+            <strong>Prazo Técnico de Execução:</strong> 4 a 8 horas úteis
           </div>
-          <div>
-            <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.5rem;">Faturamento Corporativo a Prazo</h4>
-            <p style="color: #a0aec0; font-size: 0.85rem; margin-bottom: 1rem;">
-              Emissão de Nota Fiscal Eletrônica e modalidades de faturamento B2B para pessoas jurídicas.
-            </p>
-            <a href="https://wa.me/5563981213180?text=Olá,%20gostaria%20de%20cadastrar%20minha%20empresa%20para%20faturamento%20B2B" target="_blank" class="btn btn-gold" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
-              Cadastrar Empresa para Faturamento
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        `;
+      }
+    }
 
-  <!-- FORMULÁRIO DE CONTACTO -->
-  <section class="section" id="contato">
-    <div class="container">
-      <div class="contact-grid">
-        <div>
-          <span class="section-tag">Canal de Vendas</span>
-          <h2 class="contact-title">SOLICITE UMA COTAÇÃO OU PROPOSTA TÉCNICA</h2>
-          <p class="contact-text">
-            Indique a necessidade da sua empresa para receber uma proposta com o dimensionamento adequado.
-          </p>
+    function solicitarOrcamentoFormal() {
+      const tipo = document.getElementById('project-type').value;
+      const qty = document.getElementById('project-qty').value;
+      const msg = `Olá, solicito orçamento formal para o projeto: ${tipo.toUpperCase()} com quantidade de ${qty}.`;
+      window.open(`https://wa.me/5563981213180?text=${encodeURIComponent(msg)}`, '_blank');
+    }
 
-          <div class="contact-channels-list">
-            <div class="channel-box">
-              <div class="channel-icon-wrap">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065
+    // Inicializa o cálculo ao abrir
+    calcularEscopo();
+  </script>
+</body>
+</html>
