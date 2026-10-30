@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JRBC Tech Store | Equipamentos, Marketplaces & Soluções Corporativas</title>
-  <link rel="stylesheet" href="css/style.css">
   <style>
     :root {
       --primary: #004aad;
@@ -46,6 +45,7 @@
       gap: 12px;
       margin: 30px 0;
       justify-content: center;
+      flex-wrap: wrap;
     }
     .tab-btn {
       background: var(--card-bg);
@@ -65,7 +65,7 @@
     .tab-content.active { display: block; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 20px;
     }
     .card {
@@ -76,6 +76,19 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+    }
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      border: 1px solid var(--border);
     }
     .badge {
       display: inline-block;
@@ -121,6 +134,7 @@
       background: #0b0f19;
       border: 1px solid var(--border);
       color: white;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -135,43 +149,19 @@
     </header>
 
     <div class="nav-tabs">
-      <button class="tab-btn active" onclick="switchTab('tab-marketplaces')">Varejo & Marketplaces</button>
-      <button class="tab-btn" onclick="switchTab('tab-b2b-calc')">Projetos B2B (Hardware + Serviço)</button>
-      <button class="tab-btn" onclick="switchTab('tab-distribuidor')">Equipamentos a Pronta Entrega</button>
+      <button class="tab-btn active" onclick="switchTab(event, 'tab-marketplaces')">Varejo & Marketplaces</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-b2b-calc')">Projetos B2B (Hardware + Serviço)</button>
+      <button class="tab-btn" onclick="switchTab(event, 'tab-distribuidor')">Equipamentos a Pronta Entrega</button>
     </div>
 
     <!-- ABA 1: MARKETPLACES (B2C DIRETO) -->
     <div id="tab-marketplaces" class="tab-content active">
       <div style="margin-bottom: 20px;">
         <h3>Compre Online nos Nossos Marketplaces</h3>
-        <p style="color: var(--text-muted); font-size: 14px;">Acessórios, cabos e periféricos com garantia e envio seguro.</p>
+        <p style="color: var(--text-muted); font-size: 14px;">Produtos com pronta entrega e envio direto pela nossa loja oficial Shopee.</p>
       </div>
       <div class="grid" id="grid-marketplaces">
-        <!-- Card Shopee -->
-        <div class="card">
-          <div>
-            <span class="badge badge-shopee">Shopee Oficial</span>
-            <h3>Patch Cord Cat6 Gigabit 2m (Kit 5 Unid)</h3>
-            <p style="color: var(--text-muted); font-size: 13px;">Cabos homologados com conectores blindados e testados.</p>
-          </div>
-          <div>
-            <div style="font-size: 20px; font-weight: bold; margin: 10px 0;">R$ 74,50</div>
-            <a href="https://shopee.com.br" target="_blank" class="btn btn-market" style="width: 100%; box-sizing: border-box;">Comprar na Shopee ↗</a>
-          </div>
-        </div>
-
-        <!-- Card Mercado Livre -->
-        <div class="card">
-          <div>
-            <span class="badge badge-ml">Mercado Livre</span>
-            <h3>Bobina Cabo Furukawa Cat6 305m 100% Cobre</h3>
-            <p style="color: var(--text-muted); font-size: 13px;">Homologado Anatel com envio Full para todo o Brasil.</p>
-          </div>
-          <div>
-            <div style="font-size: 20px; font-weight: bold; margin: 10px 0;">R$ 889,90</div>
-            <a href="https://mercadolivre.com.br" target="_blank" class="btn btn-market" style="background: #2d3277; width: 100%; box-sizing: border-box;">Comprar no Mercado Livre ↗</a>
-          </div>
-        </div>
+        <!-- Renderizado dinamicamente via JS -->
       </div>
     </div>
 
@@ -197,9 +187,7 @@
           <input type="number" id="project-qty" value="5" min="1" max="50" oninput="calcularEscopo()">
         </div>
 
-        <div id="escopo-resultado" style="background: #0b0f19; border: 1px dashed var(--border); padding: 16px; border-radius: 8px; margin-top: 15px;">
-          <!-- Resultado do cálculo dinâmico -->
-        </div>
+        <div id="escopo-resultado" style="background: #0b0f19; border: 1px dashed var(--border); padding: 16px; border-radius: 8px; margin-top: 15px;"></div>
 
         <button class="btn btn-b2b-builder" style="width: 100%; margin-top: 15px;" onclick="solicitarOrcamentoFormal()">Gerar Pedido Faturado com OS</button>
       </div>
@@ -209,7 +197,7 @@
     <div id="tab-distribuidor" class="tab-content">
       <div style="margin-bottom: 20px;">
         <h3>Equipamentos Faturados Direto do Distribuidor</h3>
-        <p style="color: var(--text-muted); font-size: 14px;">Envio do armazém direto para o endereço da sua empresa.</p>
+        <p style="color: var(--text-muted); font-size: 14px;">Envio do armazém com faturamento direto para o endereço da sua empresa.</p>
       </div>
       <div class="grid">
         <div class="card">
@@ -220,7 +208,7 @@
           </div>
           <div>
             <div style="font-size: 16px; font-weight: bold; color: var(--accent); margin: 10px 0;">Faturamento Direto PJ</div>
-            <button class="btn btn-checkout" style="width: 100%;" onclick="alert('Iniciando gateway de faturamento do distribuidor...')">Comprar com Despacho Automático</button>
+            <button class="btn btn-checkout" style="width: 100%;" onclick="solicitarContatoCorporativo('Dell R640')">Solicitar Cotação B2B</button>
           </div>
         </div>
       </div>
@@ -229,12 +217,38 @@
   </div>
 
   <script>
-    function switchTab(tabId) {
+    function switchTab(evt, tabId) {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       
-      event.target.classList.add('active');
+      evt.target.classList.add('active');
       document.getElementById(tabId).classList.add('active');
+    }
+
+    // Carrega o lote da Shopee dinamicamente
+    async function carregarProdutosShopee() {
+      const container = document.getElementById('grid-marketplaces');
+      try {
+        const res = await fetch('data/products_shopee.json');
+        const items = await res.json();
+        
+        container.innerHTML = items.map(p => `
+          <div class="card">
+            <div>
+              <img src="${p.image}" alt="${p.title}" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80'">
+              <span class="badge ${p.badge_class}">${p.badge}</span>
+              <h3 style="font-size: 16px; margin: 8px 0;">${p.title}</h3>
+              <p style="color: var(--text-muted); font-size: 13px; line-height: 1.4;">${p.description}</p>
+            </div>
+            <div>
+              <div style="font-size: 20px; font-weight: bold; margin: 15px 0 5px 0; color: #fff;">${p.price}</div>
+              <a href="${p.url}" target="_blank" class="btn btn-market" style="width: 100%; box-sizing: border-box;">Comprar na Shopee ↗</a>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        console.error('Erro ao carregar produtos:', e);
+      }
     }
 
     function calcularEscopo() {
@@ -250,7 +264,7 @@
 
         res.innerHTML = `
           <strong style="color: #10b981;">Lista de Materiais Necessários:</strong>
-          <ul style="font-size: 13px; color: var(--text-muted); margin: 8px 0;">
+          <ul style="font-size: 13px; color: var(--text-muted); margin: 8px 0; padding-left: 20px;">
             <li>${cabosMetros}m de Cabo Cat6 Homologado 100% Cobre</li>
             <li>${conectores} Conectores Macho RJ-45 Cat6 + ${qty} Keystones Fêmea</li>
             <li>${qty} Patch Cords de manobra (1,5m)</li>
@@ -264,7 +278,7 @@
       } else {
         res.innerHTML = `
           <strong style="color: #10b981;">Serviço de Bancada / Servidor:</strong>
-          <ul style="font-size: 13px; color: var(--text-muted); margin: 8px 0;">
+          <ul style="font-size: 13px; color: var(--text-muted); margin: 8px 0; padding-left: 20px;">
             <li>Montagem e fixação em Rack 19"</li>
             <li>Configuração de controladora RAID 1/5/10</li>
             <li>Instalação e endurecimento do Proxmox VE / Hyper-V</li>
@@ -284,8 +298,14 @@
       window.open(`https://wa.me/5563981213180?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
-    // Inicializa o cálculo ao abrir
+    function solicitarContatoCorporativo(item) {
+      const msg = `Olá, gostaria de cotação corporativa B2B para: ${item}.`;
+      window.open(`https://wa.me/5563981213180?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // Inicializa na carga da página
     calcularEscopo();
+    carregarProdutosShopee();
   </script>
 </body>
 </html>

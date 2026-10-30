@@ -1,0 +1,52 @@
+[
+  {
+    "id": "JRBC-CAT6-PATCH-01",
+    "title": "Cabo de Rede Patch Cord Cat6 Gigabit Blindado RJ45",
+    "description": "Cabo blindado com conectores banhados a ouro. Alta performance para fibra óptica, roteador, switch e PC gamer.",
+    "price": "R$ 24,90",
+    "badge": "Shopee Oficial",
+    "badge_class": "badge-shopee",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "url": "https://shopee.com.br/shop/559951636/"
+  },
+  {
+    "id": "JRBC-CAT6-FLAT-02",
+    "title": "Cabo de Rede Flat Cat6 Gigabit RJ-45 Fino e Flexível",
+    "description": "Design achatado ideal para passar sob portas, rodapés e carpetes sem degradar sinal. Suporta 1000Mbps.",
+    "price": "R$ 28,50",
+    "badge": "Shopee Oficial",
+    "badge_class": "badge-shopee",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "url": "https://shopee.com.br/shop/559951636/"
+  },
+  {
+    "id": "JRBC-CAT6A-10G-03",
+    "title": "Cabo de Rede Cat6a 10Gbps Blindado SFTP Conector Metálico",
+    "description": "Altíssima taxa de transferência até 10Gbps e 500MHz. Blindagem contra interferências EMI/RFI para servidores.",
+    "price": "R$ 39,90",
+    "badge": "Shopee Oficial",
+    "badge_class": "badge-shopee",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "url": "https://shopee.com.br/shop/559951636/"
+  },
+  {
+    "id": "JRBC-KIT5-CAT6-04",
+    "title": "Kit 5 Unidades Patch Cord Cat6 Gigabit 1.5m RJ45",
+    "description": "Pacote promocional com 5 cabos Cat6 100% cobre testados de fábrica. Ideal para armários de rede e patch panels.",
+    "price": "R$ 62,90",
+    "badge": "Shopee Oficial",
+    "badge_class": "badge-shopee",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "url": "https://shopee.com.br/shop/559951636/"
+  },
+  {
+    "id": "JRBC-EMENDA-RJ45-05",
+    "title": "Adaptador Acoplador Extensor RJ45 Fêmea x Fêmea Cat6",
+    "description": "Emenda rápida para extensão de cabos de rede sem perda de velocidade. Terminais banhados a ouro.",
+    "price": "R$ 15,90",
+    "badge": "Shopee Oficial",
+    "badge_class": "badge-shopee",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "url": "https://shopee.com.br/shop/559951636/"
+  }
+]
